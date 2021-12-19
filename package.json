@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-louiskamp",
+  "version": "1.0.0",
+  "description": "My config files",
+  "main": "index.js",
+  "repository": "https://github.com/LouisKamp/ts-eslint-config",
+  "author": "Louis Kamp Eskildsen",
+  "license": "MIT",
+  "scripts": {
+    "lint": "npx eslint --ext .tsx --ext .ts tests/ --fix"
+  },
+  "eslintConfig": {
+    "extends": "./index.js"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "eslint-plugin-unused-imports": "^0.1.3"
+  },
+  "peerDependencies": {
+    "eslint": ">=6.6.0"
+  }
+}
