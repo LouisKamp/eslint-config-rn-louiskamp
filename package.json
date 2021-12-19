@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My config files",
   "main": "index.js",
-  "repository": "https://github.com/LouisKamp/ts-eslint-config",
+  "repository": "https://github.com/LouisKamp/eslint-config-rn-louiskamp",
   "author": "Louis Kamp Eskildsen",
   "license": "MIT",
   "scripts": {
