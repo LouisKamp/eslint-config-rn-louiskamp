@@ -10,7 +10,6 @@ module.exports = {
         'plugin:import/errors',
         'plugin:import/warnings',
         'plugin:import/typescript',
-        'plugin:jest/recommended',
     ],
     globals: {
         Atomics: 'readonly',
@@ -25,7 +24,6 @@ module.exports = {
         sourceType: 'module'
     },
     plugins: [
-        'jest',
         'import',
         'unused-imports',
         '@typescript-eslint',
