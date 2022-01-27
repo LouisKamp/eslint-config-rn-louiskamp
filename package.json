@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-louiskamp",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "My config files",
   "main": "index.js",
   "repository": "https://github.com/LouisKamp/eslint-config-rn-louiskamp",
