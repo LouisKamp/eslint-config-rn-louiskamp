@@ -30,9 +30,10 @@ module.exports = {
         'simple-import-sort',
     ],
     rules: {
-        indent: ['error', 4, { SwitchCase: 1 }],
+        "react/react-in-jsx-scope": "off",
+        "indent": ['error', 4, { SwitchCase: 1 }],
         'react/jsx-indent-props': [1, 4],
-        semi: ['error', 'never'],
+        "semi": ['error', 'never'],
         'object-curly-spacing': ['error', 'always'],
         'react/jsx-indent': [2, 4],
         'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
@@ -52,9 +53,9 @@ module.exports = {
         'import/prefer-default-export': [0],
         'import/extensions': [1, 'never'],
         '@typescript-eslint/no-unused-vars': [1, {
-            vars: 'all',
-            args: 'after-used',
-            ignoreRestSiblings: false
+            "vars": 'all',
+            "args": 'after-used',
+            "ignoreRestSiblings": false
         }],
         'simple-import-sort/imports': 'error',
         'unused-imports/no-unused-imports-ts': 'error',
