@@ -56,7 +56,7 @@ module.exports = {
             args: 'after-used',
             ignoreRestSiblings: false
         }],
-        'simple-import-sort/sort': 'error',
+        'simple-import-sort/imports': 'error',
         'unused-imports/no-unused-imports-ts': 'error',
         'react/jsx-props-no-spreading': [0],
         'import/no-unresolved': [0],
