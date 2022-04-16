@@ -206,7 +206,7 @@ module.exports = {
         "react/jsx-one-expression-per-line": [
             1,
             {
-                "allow": "single-child"
+                "allow": "literal"
             }
         ],
         "react/jsx-props-no-multi-spaces": [
