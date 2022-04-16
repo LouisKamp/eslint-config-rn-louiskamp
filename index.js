@@ -1,79 +1,244 @@
 module.exports = {
-    env: {
-        browser: true,
-        es6: true,
-        node: true
+    "env": {
+        "browser": true,
+        "es2021": true
     },
-    extends: [
-        'airbnb',
-        'eslint:recommended',
-        'plugin:import/errors',
-        'plugin:import/warnings',
-        'plugin:import/typescript',
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:react-hooks/recommended"
     ],
-    globals: {
-        Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly'
-    },
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
         },
-        ecmaVersion: 2018,
-        sourceType: 'module'
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": [
+            "./**/tsconfig.json"
+        ]
     },
-    plugins: [
-        'import',
-        'unused-imports',
-        '@typescript-eslint',
-        'simple-import-sort',
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "import",
+        "simple-import-sort"
     ],
-    rules: {
-        "react/react-in-jsx-scope": "off",
-        "indent": ['error', 4, { SwitchCase: 1 }],
-        'react/jsx-indent-props': [1, 4],
-        "semi": ['error', 'never'],
-        'object-curly-spacing': ['error', 'always'],
-        'react/jsx-indent': [2, 4],
-        'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
-        'react/jsx-tag-spacing': ['error', {
-            closingSlash: 'never',
-            beforeSelfClosing: 'allow',
-            afterOpening: 'never',
-            beforeClosing: 'never'
-        }],
-        'no-unused-vars': 'off',
-        'jsx-a11y/click-events-have-key-events': [0],
-        'react/no-array-index-key': [1],
-        'jsx-a11y/no-static-element-interactions': [0],
-        'react/prop-types': [0],
-        'react/destructuring-assignment': [0, 'never'],
-        //'react/jsx-one-expression-per-line': [0, 'literal'],
-        'import/prefer-default-export': [0],
-        'import/extensions': [1, 'never'],
-        '@typescript-eslint/no-unused-vars': [1, {
-            "vars": 'all',
-            "args": 'after-used',
-            "ignoreRestSiblings": false
-        }],
-        'simple-import-sort/sort': 'error',
-        'unused-imports/no-unused-imports-ts': 'error',
-        'react/jsx-props-no-spreading': [0],
-        'import/no-unresolved': [0],
-        'import/no-extraneous-dependencies': [0],
-        'import/no-cycle': [0],
-        'global-require': [0],
-        'no-else-return': 'off',
-        'padded-blocks': 'off',
-        'max-len': [1, 120],
-        'no-use-before-define': [0],
-        'arrow-body-style': 'off',
-        'comma-dangle': 'off',
-        'no-trailing-spaces': 'off',
-        'react/jsx-closing-bracket-location': [1, 'after-props'],
-        'no-useless-constructor': 'off',
-        'react/require-default-props': [0],
-        'no-multiple-empty-lines': ["error", { "max": 3, "maxEOF": 0 }],
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".tsx"
+            ]
+        },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            }
+        }
+    },
+    "rules": {
+        "jsx-quotes": [
+            "error",
+            "prefer-double"
+        ],
+        "@typescript-eslint/type-annotation-spacing": [
+            "error"
+        ],
+        "@typescript-eslint/strict-boolean-expressions": [
+            "error"
+        ],
+        "@typescript-eslint/promise-function-async": [
+            "error",
+            {
+                "checkArrowFunctions": true,
+                "checkFunctionDeclarations": true,
+                "checkFunctionExpressions": true,
+                "checkMethodDeclarations": true
+            }
+        ],
+        "@typescript-eslint/prefer-reduce-type-parameter": [
+            "error"
+        ],
+        "@typescript-eslint/non-nullable-type-assertion-style": [
+            "error"
+        ],
+        "@typescript-eslint/no-useless-empty-export": [
+            "error"
+        ],
+        "@typescript-eslint/no-unnecessary-type-arguments": [
+            "error"
+        ],
+        "@typescript-eslint/no-unnecessary-condition": [
+            "error"
+        ],
+        "@typescript-eslint/no-confusing-non-null-assertion": [
+            "error"
+        ],
+        "@typescript-eslint/method-signature-style": [
+            "error",
+            "method"
+        ],
+        "@typescript-eslint/member-delimiter-style": [
+            "error",
+            {
+                "multiline": {
+                    "delimiter": "none"
+                },
+                "singleline": {
+                    "delimiter": "semi"
+                }
+            }
+        ],
+        "@typescript-eslint/consistent-type-definitions": [
+            "error",
+            "type"
+        ],
+        "no-multi-spaces": "error",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 3,
+                "maxEOF": 0
+            }
+        ],
+        "import/no-unresolved": "error",
+        "@typescript-eslint/indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "react/self-closing-comp": [
+            "error",
+            {
+                "component": true,
+                "html": true
+            }
+        ],
+        "react/jsx-boolean-value": [
+            1,
+            "never"
+        ],
+        "react/jsx-closing-bracket-location": [
+            1,
+            {
+                "nonEmpty": "tag-aligned",
+                "selfClosing": "tag-aligned"
+            }
+        ],
+        "react/jsx-closing-tag-location": [
+            1,
+            "after-props"
+        ],
+        "react/jsx-curly-brace-presence": [
+            1,
+            "never"
+        ],
+        "react/jsx-curly-newline": [
+            1,
+            {
+                "multiline": "consistent",
+                "singleline": "consistent"
+            }
+        ],
+        "react/jsx-curly-spacing": [
+            1,
+            "never"
+        ],
+        "react/jsx-equals-spacing": [
+            1,
+            "never"
+        ],
+        "react/jsx-first-prop-new-line": [
+            1,
+            "multiline-multiprop"
+        ],
+        "react/jsx-fragments": [
+            1,
+            "element"
+        ],
+        "react/jsx-max-props-per-line": [
+            1,
+            {
+                "maximum": 4,
+                "when": "multiline"
+            }
+        ],
+        "react/jsx-newline": [
+            1,
+            {
+                "prevent": false
+            }
+        ],
+        "react/jsx-no-useless-fragment": [
+            1,
+            {
+                "allowExpressions": true
+            }
+        ],
+        "react/jsx-one-expression-per-line": [
+            1,
+            {
+                "allow": "single-child"
+            }
+        ],
+        "react/jsx-props-no-multi-spaces": [
+            1
+        ],
+        "react/jsx-sort-props": [
+            1,
+            {
+                "callbacksLast": true,
+                "shorthandFirst": true,
+                "ignoreCase": true,
+                "noSortAlphabetically": false,
+                "reservedFirst": true
+            }
+        ],
+        "react/jsx-tag-spacing": [
+            1,
+            {
+                "closingSlash": "never",
+                "beforeSelfClosing": "always",
+                "afterOpening": "never",
+                "beforeClosing": "never"
+            }
+        ],
+        "react/jsx-wrap-multilines": [
+            1,
+            {
+                "declaration": "parens-new-line",
+                "assignment": "parens-new-line",
+                "return": "parens-new-line",
+                "arrow": "parens-new-line",
+                "condition": "parens-new-line",
+                "logical": "parens-new-line",
+                "prop": "parens-new-line"
+            }
+        ]
     }
 }
