@@ -41,6 +41,7 @@ module.exports = {
         }
     },
     "rules": {
+        "react/prop-types": [0],
         "jsx-quotes": [
             "error",
             "prefer-double"
@@ -117,7 +118,10 @@ module.exports = {
         "import/no-unresolved": "error",
         "@typescript-eslint/indent": [
             "error",
-            4
+            4,
+            {
+                ignoredNodes: ['TSTypeParameterInstantiation']
+            }
         ],
         "linebreak-style": [
             "error",
