@@ -195,8 +195,8 @@ module.exports = {
         "react/jsx-max-props-per-line": [
             1,
             {
-                "maximum": 4,
-                "when": "multiline"
+                "single": 3, 
+                "multi": 1 
             }
         ],
         "react/jsx-newline": [
