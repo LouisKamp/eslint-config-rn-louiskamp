@@ -42,6 +42,8 @@ module.exports = {
         }
     },
     "rules": {
+        "react/react-in-jsx-scope": [0],
+        // "@typescript-eslint/no-non-null-assertion": [0],
         "unused-imports/no-unused-imports": "error",
 		"unused-imports/no-unused-vars": [
 			"warn",
