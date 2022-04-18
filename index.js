@@ -89,7 +89,7 @@ module.exports = {
         ],
         "@typescript-eslint/method-signature-style": [
             "error",
-            "method"
+            "property"
         ],
         "@typescript-eslint/member-delimiter-style": [
             "error",
