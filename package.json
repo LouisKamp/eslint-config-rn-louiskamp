@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-louiskamp-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My config files for react",
   "main": "index.js",
   "repository": "https://github.com/LouisKamp/eslint-config-louiskamp-react",
