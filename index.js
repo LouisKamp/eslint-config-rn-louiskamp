@@ -157,7 +157,7 @@ module.exports = {
         "react/jsx-closing-bracket-location": [
             1,
             {
-                "nonEmpty": "tag-aligned",
+                "nonEmpty": "after-props",
                 "selfClosing": "tag-aligned"
             }
         ],
