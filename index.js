@@ -42,6 +42,7 @@ module.exports = {
         }
     },
     "rules": {
+        "react/no-unescaped-entities": "warn",
         "react/react-in-jsx-scope": [0],
         // "@typescript-eslint/no-non-null-assertion": [0],
         "unused-imports/no-unused-imports": "error",
