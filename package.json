@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-louiskamp",
-  "version": "2.0.9",
-  "description": "My config files",
+  "name": "eslint-config-louiskamp-react",
+  "version": "1.0.0",
+  "description": "My config files for react",
   "main": "index.js",
   "repository": "https://github.com/LouisKamp/eslint-config-rn-louiskamp",
   "author": "Louis Kamp Eskildsen",
